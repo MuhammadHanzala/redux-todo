@@ -1,0 +1,39 @@
+{
+  "name": "vscode-react-intellisense",
+  "version": "0.0.2",
+  "dependencies": {
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "^11.0.1",
+    "express": "^4.13.4",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "watchify": "^3.4.0"
+  },
+  "scripts": {
+    "preinstall": "npm i typings -D && typings i dt~react dt~react-dom -G -D",
+    "build": "browserify ./public/index.js -t babelify -o ./public/bundle.js",
+    "start": "clear && node server.js & watchify ./public/index.js -v -t babelify -o ./public/bundle.js"
+  },
+  "description": "A blank project to get Intellisense for React in Visual Studio Code",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didierfranc/vscode-react-intellisense.git"
+  },
+  "keywords": [
+    "react",
+    "vs",
+    "visual",
+    "studio",
+    "intellisense"
+  ],
+  "author": "Didier Franc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/didierfranc/vscode-react-intellisense/issues"
+  },
+  "homepage": "https://github.com/didierfranc/vscode-react-intellisense#readme"
+}
